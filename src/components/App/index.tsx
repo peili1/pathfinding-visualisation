@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
 import Board from '../Board';
-import { generateGridDimension } from '../utils';
-
 import './index.css';
 
-interface State {
-  grid: number[][];
-}
-
-export default class App extends Component<{}, State> {
-  readonly state = { grid: generateGridDimension() };
-
+export default class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <Board grid={this.state.grid} />
-      </div>
+      <>
+        <div className='app'>
+          <Board />
+        </div>
+      </>
     );
   }
 }
